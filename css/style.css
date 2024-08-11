@@ -1,0 +1,242 @@
+body {
+  padding: 2rem;
+  font-family: "Lato", sans-serif;
+  /* background-color: #F7F7F7; */
+}
+
+/* universal */
+.light-black {
+  color: #777777;
+}
+
+.height-95vh {
+  height: 95vh;
+}
+
+.title-skew:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.2);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.sm-line-break {
+  width: 20%;
+  height: 1px;
+  background-color: #77777754;
+  margin: 0 auto 15px auto;
+}
+
+/* universal */
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)),
+    url(../img/hero.jpg);
+  /* background-position: 50% 20% */
+  background-position: center center;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo {
+  width: 5rem;
+  position: relative;
+  top: 5%;
+  left: 2%;
+}
+
+.header-p {
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title,
+.header-description,
+.header-button {
+  color: white;
+  text-decoration: none;
+  /* font-weight: bold; */
+}
+
+.header-title {
+  padding: 0.5rem;
+  letter-spacing: 2.5rem;
+  font-size: 3.5rem;
+}
+
+.header-description {
+  letter-spacing: 1rem;
+}
+
+.header-button {
+  position: relative;
+  bottom: 20%;
+  border-radius: 50px;
+  padding: 1rem 1.8rem;
+  margin-top: 3rem;
+  background-color: white;
+  color: #817979;
+  transition: all 0.5s;
+}
+
+.header-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: white;
+  border-radius: 50px;
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+
+.header-button:hover::after {
+  /* animation: button-hover 1s ease-in; */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  scale: 1.4;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.section2,
+.section4 {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20rem;
+}
+
+.btn-text {
+  font-size: 1rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s;
+}
+
+.btn-text::after {
+  content: "→";
+  padding: 0.2rem;
+}
+
+.btn-text:hover {
+  color: #f7f7f7;
+  background-color: #55c57a;
+}
+
+.section2-header-text,
+.section4-header-text {
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  color: transparent;
+  display: inline-block;
+  margin: 0 auto;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-weight: 700;
+  background-clip: text;
+}
+
+.section2-image1,
+.section2-image2,
+.section2-image3 {
+  width: 45%;
+  position: absolute;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+  overflow: clip;
+}
+
+.section2-image1:hover,
+.section2-image2:hover,
+.section2-image3:hover {
+  z-index: 11;
+  scale: 1.25;
+  outline: 0.5rem solid #55c57a;
+  padding: 0.8rem;
+}
+
+.section2-image1 {
+  top: 0;
+  left: 0;
+  z-index: 8;
+}
+
+.section2-image2 {
+  top: 10%;
+  left: 35%;
+  z-index: 9;
+}
+
+.section2-image3 {
+  top: 40%;
+  left: 15%;
+  z-index: 10;
+}
+
+.image-container:hover .section2-image:not(:hover) {
+  transform: scale(0.9);
+}
+
+.section3 {
+  margin-top: -18rem;
+  background-image: linear-gradient(to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  height: 95vh;
+  clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+  background-position: center center;
+  background-size: cover;
+}
+
+.section3-box {
+  /* margin: 0 auto; */
+  width: 18%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.section3-box:hover {
+  scale: 1.05;
+  transform: translateY(-10px);
+}
+
+.feature-box__icon {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  background-clip: text;
+  color: transparent;
+}
+
+.tour-box-img1 {
+  background-image: linear-gradient(to right bottom,
+      rgba(225, 175, 0, 0.8),
+      rgba(225, 119, 48, 0.8)),
+    url(../img/nat-5.jpg);
+  /* background-position: 50% 20% */
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  height: 70%;
+}
+
+.word-1 {
+  color: #f7f7f7;
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
